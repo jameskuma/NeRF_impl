@@ -1,0 +1,26 @@
+dataset:
+  root_dir: None
+  dataset_name: None
+  img_wh: None
+render:
+  xyz_N_freqs: 10
+  dir_N_freqs: 4
+  N_samples: 64
+  N_importance: 64
+  perturb: 1.0
+  noise_std: 1.0
+  chunk: 32768 # 32*1024
+  use_disp: False
+  white_back: False
+train:
+  lr_init: 0.0005
+  lr_final: 0.000005
+  num_epochs: 20
+  batch_size: 1024
+  lr_delay_steps: 5 # 3 epochs for warmup 
+  lr_delay_mult: 0.01
+  loss_type: 'mse'
+  model: 'nerf'
+exp:
+  val_epcoch_freq: 5
+  exp_name: None

@@ -1,0 +1,17 @@
+dataset:
+  root_dir: benchmark/NeRF_example/nerf_synthetic/lego
+  dataset_name: lego
+  img_wh: [400, 400]
+render:
+  N_samples: 64
+  N_importance: 64
+  perturb: 1.0
+  noise_std: 0.0
+  batch_size: 1024
+  white_back: True
+train:
+  num_epochs: 30
+  loss_type: 'mse'
+  model: 'nerf'
+exp:
+  exp_name: lego_
